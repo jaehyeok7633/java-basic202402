@@ -1,25 +1,28 @@
-package oop.inherit.bad;
+package oop.constructor;
 
-public class Hunter {
+public class PhoneMain {
 
-    String name;
-    int level;
-    int atk;
-    int hp;
-    String pet;
+    public static void main(String[] args) {
+
+        Phone basic = new Phone();
+        basic.showSpec();
+
+        System.out.println("-------------------------------------------");
+
+        Phone galaxy = new Phone("갤럭시 s24");
+        galaxy.showSpec();
+
+        System.out.println("-------------------------------------------");
+
+        Phone iPhone = new Phone("아이폰 15", "스페이스 그레이");
+        iPhone.showSpec();
 
 
-    void characterInfo() {
-        System.out.println("*** 캐릭터의 정보 ***");
-        System.out.println("# 아이디: " + name);
-        System.out.println("# 레벨: " + level);
-        System.out.println("# 공격력: " + atk);
-        System.out.println("# 체력: " + hp);
-        System.out.println("# 펫 이름: " + pet);
     }
 
-
 }
+
+
 
 
 
