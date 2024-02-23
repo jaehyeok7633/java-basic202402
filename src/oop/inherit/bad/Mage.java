@@ -1,12 +1,12 @@
 package oop.inherit.bad;
 
-public class Hunter {
+public class Mage {
 
     String name;
     int level;
     int atk;
     int hp;
-    String pet;
+    int mana;
 
 
     void characterInfo() {
@@ -15,11 +15,15 @@ public class Hunter {
         System.out.println("# 레벨: " + level);
         System.out.println("# 공격력: " + atk);
         System.out.println("# 체력: " + hp);
-        System.out.println("# 펫 이름: " + pet);
+        System.out.println("# 마나: " + mana);
     }
 
 
 }
+
+
+
+
 
 
 
