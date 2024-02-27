@@ -3,10 +3,10 @@ package basic.constate;
 import java.util.Scanner;
 
 public class IfQuiz {
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         /*
-        - 정수 3개를 입력 받습니다.
+        - 정수 3개를 입력 받습니다. (변수 하나씩 선언해서 따로따로 받으세요.)
         - 가장 큰 값, 가장 작은 값, 중간값을 구해서 출력해 보세요.
 
         # max, mid, min이라는 변수를 미리 선언하셔서
@@ -16,11 +16,11 @@ public class IfQuiz {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("정수 1: ");
+        System.out.print("정수 1: ");
         int num1 = sc.nextInt();
-        System.out.println("정수 2: ");
+        System.out.print("정수 2: ");
         int num2 = sc.nextInt();
-        System.out.println("정수 3: ");
+        System.out.print("정수 3: ");
         int num3 = sc.nextInt();
 
         int max, mid, min;
@@ -29,7 +29,7 @@ public class IfQuiz {
             max = num1;
             if(num2 > num3) {
                 mid = num2; min = num3;
-            } else  {
+            } else {
                 mid = num3; min = num2;
             }
         } else if(num2 > num1 && num2 > num3) { // num2가 max다!
@@ -39,7 +39,7 @@ public class IfQuiz {
             } else {
                 mid = num3; min = num1;
             }
-        } else {
+        } else { // num3가 max다!
             max = num3;
             if(num1 > num2) {
                 mid = num1; min = num2;
@@ -48,7 +48,7 @@ public class IfQuiz {
             }
         }
 
-        System.out.println("==========================");
+        System.out.println("==========================================");
         System.out.println("max = " + max);
         System.out.println("mid = " + mid);
         System.out.println("min = " + min);
@@ -59,5 +59,9 @@ public class IfQuiz {
 
 
 
+
+
+
     }
+
 }

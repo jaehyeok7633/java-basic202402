@@ -3,6 +3,7 @@ package basic.loop;
 import java.util.Scanner;
 
 public class BreakExample {
+
     public static void main(String[] args) {
 
         for (int i = 1; i < 11; i++) {
@@ -11,7 +12,7 @@ public class BreakExample {
         }
         System.out.println("\n반복문 종료!");
 
-        System.out.println("--------------------------------------------");
+        System.out.println("----------------------------------------------");
 
         for (int i = 1; i < 11; i++) {
             if(i == 6) continue;
@@ -19,7 +20,7 @@ public class BreakExample {
         }
         System.out.println("\n반복문 종료!");
 
-        System.out.println("--------------------------------------------");
+        System.out.println("----------------------------------------------");
 
         Scanner sc = new Scanner(System.in);
         System.out.println("15 x 6 = ???");
@@ -36,9 +37,16 @@ public class BreakExample {
                 System.out.println("정답은 90 이었습니다~!");
                 break;
             } else {
-                System.out.println("틀렸습니다!~");
+                System.out.println("틀렸습니다~!");
             }
-
         }
+
+
+
     }
+
 }
+
+
+
+

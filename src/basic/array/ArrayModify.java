@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayModify {
+
     public static void main(String[] args) {
 
         String[] foods = {"삼겹살", "족발", "피자", "햄버거"};
@@ -13,7 +14,7 @@ public class ArrayModify {
         foods[2] = "탕수육";
         System.out.println(Arrays.toString(foods));
 
-        System.out.println("--------------------------------------");
+        System.out.println("------------------------------------------------");
 
         Scanner sc = new Scanner(System.in);
         System.out.print("수정할 음식을 입력하세요: ");
@@ -33,4 +34,12 @@ public class ArrayModify {
         }
 
     }
+
 }
+
+
+
+
+
+
+

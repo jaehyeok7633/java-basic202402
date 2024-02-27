@@ -8,6 +8,7 @@ public class Hunter {
     int hp;
     String pet;
 
+
     void characterInfo() {
         System.out.println("*** 캐릭터의 정보 ***");
         System.out.println("# 아이디: " + name);
@@ -16,4 +17,6 @@ public class Hunter {
         System.out.println("# 체력: " + hp);
         System.out.println("# 펫 이름: " + pet);
     }
+
+
 }

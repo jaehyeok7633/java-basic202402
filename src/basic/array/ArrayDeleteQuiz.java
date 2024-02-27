@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayDeleteQuiz {
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -11,14 +12,14 @@ public class ArrayDeleteQuiz {
         System.out.println("현재 저장된 친구들: " + Arrays.toString(kakao));
 
         /*
-         1. 삭제할 친구를 입력받아서 삭제를 진행해 주세요.
+		 1. 삭제할 친구를 입력받아서 삭제를 진행해 주세요.
 
-         2. 입력받은 이름이 없다면 없다고 얘기해 주세요.
+		 2. 입력받은 이름이 없다면 없다고 얘기해 주세요.
 
-         - 추가
-         배열의 길이가 0이 될 때까지 삭제를 반복해 보세요.
-         더 이상 지울 친구가 없다면 프로그램 종료.
-         */
+		 - 추가
+		 배열의 길이가 0이 될 때까지 삭제를 반복해 보세요.
+		 더 이상 지울 친구가 없다면 프로그램 종료.
+		*/
 
         while (true) {
 
@@ -29,13 +30,13 @@ public class ArrayDeleteQuiz {
             }
 
             System.out.println("# 삭제할 친구의 이름을 입력하세요!");
-            System.out.println(">> ");
+            System.out.print(">> ");
             String targetName = sc.next();
 
             // 인덱스 탐색
             int index = -1;
             for (int i = 0; i < kakao.length; i++) {
-                if (targetName.equals(kakao[i])) {
+                if(targetName.equals(kakao[i])) {
                     index = i;
                     break;
                 }
@@ -62,11 +63,20 @@ public class ArrayDeleteQuiz {
             } else {
                 System.out.printf("해당 이름(%s)은(는) 존재하지 않습니다.\n", targetName);
             }
-
         }
 
         sc.close();
 
+
     }
 
 }
+
+
+
+
+
+
+
+
+

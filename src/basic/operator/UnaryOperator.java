@@ -1,9 +1,10 @@
 package basic.operator;
 
 public class UnaryOperator {
+
     public static void main(String[] args) {
 
-        // 증감 연산자 (++. --)
+        // 증감 연산자 (++, --)
         // 변수의 값을 단순히 하나 올리거나 내릴 때 사용합니다.
 
         int i = 1;
@@ -14,7 +15,7 @@ public class UnaryOperator {
         System.out.println("j = " + j);
         System.out.println("k = " + k);
 
-        System.out.println("---------------------------------");
+        System.out.println("-----------------------------------------------");
 
         int x = 1;
         int y = ++x; // 전위 연산 (선증감 후연산)
@@ -24,5 +25,21 @@ public class UnaryOperator {
         System.out.println("y = " + y);
         System.out.println("z = " + z);
 
+
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

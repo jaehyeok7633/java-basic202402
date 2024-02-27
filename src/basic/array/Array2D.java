@@ -3,6 +3,7 @@ package basic.array;
 import java.util.Arrays;
 
 public class Array2D {
+
     public static void main(String[] args) {
 
         /*
@@ -15,8 +16,8 @@ public class Array2D {
         int[][] arr = {
             {1, 2, 3},
             {4, 5, 6},
-            {7 ,8, 9},
-            {10, 11, 12, 13}
+            {7 ,8 ,9},
+            {10, 11, 12, 13, 14}
         };
 
         System.out.println(arr.length);
@@ -30,9 +31,9 @@ public class Array2D {
         // 2차원 배열 내부의 배열 요소들을 한 눈에 확인할 수 있는 메서드
         System.out.println(Arrays.deepToString(arr));
 
-        System.out.println("------------------------------------------");
+        System.out.println("---------------------------------------------------");
 
-        // 빈 2차원 배열 반들기
+        // 빈 2차원 배열 만들기
         int[][] arr2 = new int[3][4];
         System.out.println(Arrays.deepToString(arr2));
 
@@ -45,5 +46,22 @@ public class Array2D {
             }
             System.out.println(); // 단순 줄 개행
         }
+
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

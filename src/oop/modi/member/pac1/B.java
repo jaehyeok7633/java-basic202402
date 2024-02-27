@@ -1,23 +1,18 @@
 package oop.modi.member.pac1;
 
-public class A {
+public class B {
 
-    public int x;
-    int y; // default
-    private int z;
+    public B() {
+        A a = new A();
+        a.x = 1;
+        a.y = 2;
+//        a.z = 3; (x)
 
-    public A() {
-        x = 1;
-        y = 2;
-        z = 3;
+        a.method1();
+        a.method2();
+//        a.method3(); (x) private
 
-        method1();
-        method2();
-        method3();
+
     }
-
-    public void method1() {}
-    void method2() {} //default
-    private void method3() {}
 
 }

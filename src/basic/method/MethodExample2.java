@@ -1,4 +1,5 @@
 package basic.method;
+
 /*
 # 매개 변수 (parameter, argument)
 
@@ -19,12 +20,13 @@ package basic.method;
  () 내부를 비워둡니다. 그리고 호출할 때도 ()를 비워서 호출합니다.
 
 */
+
 public class MethodExample2 {
 
-    // x ~ y 까지의 누적합계를 구하는 메서드
+    // x ~ y까지의 누적합계를 구하는 메서드
     static int calcRangeTotal(int start, int end) {
         int total = 0;
-        for (int i = start; i <= end; i++) {
+        for(int i=start; i<=end; i++) {
             total += i;
         }
         return total;
@@ -51,9 +53,8 @@ public class MethodExample2 {
         return total;
     }
 
-    // 가변이수 (가변 파라미터)를 사용한 매개변수 작성.
+    // 가변인수 (가변 파라미터)를 사용한 매개변수 작성.
     // 콤마로 나열되어 들어오는 여러개의 값을 배열로 묶어서 내부로 전달합니다.
-
     static int calcNumberTotal2(int... nums) {
         int total = 0;
         for(int n : nums) {
@@ -62,12 +63,13 @@ public class MethodExample2 {
         return total;
     }
 
+
     public static void main(String[] args) {
 
         int result = calcRangeTotal(34, 96);
         System.out.println("result = " + result);
 
-        System.out.println("오늘 점심 뭐먹지??? " + selectRandomFood());
+        System.out.println("오늘 점심 뭐먹지???: " + selectRandomFood());
 
         int[] arr = {10, 30, 50, 70, 90, 110, 130};
         int total = calcNumberTotal(arr);
@@ -80,5 +82,18 @@ public class MethodExample2 {
         // 배열로 포장해서 보내도 됩니다.
         total = calcNumberTotal2(1,2,3,4,5,6,7);
         System.out.println("total = " + total);
+
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+

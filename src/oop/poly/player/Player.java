@@ -8,7 +8,6 @@ public class Player {
     int hp;
 
     Player() {
-        System.out.println("Player의 기본 생성자 호출!");
         this.level = 1;
         this.atk = 3;
         this.hp = 50;
@@ -16,22 +15,15 @@ public class Player {
 
     Player(String name) {
         this();
-        System.out.println("Player의 2번 생성자 호출!");
-//        level = 1;
-//        atk = 3;
-//        hp = 50;
         this.name = name;
     }
 
     Player(String name, int hp) {
-        this(name); // 다른 생성자의 호출은 생성자 내에서 최상단에 위치해야 합니다.
-        System.out.println("Player의 3번 생성자 호출");
+        this(name);
         this.hp = hp;
     }
 
     void attack(Player target) {
-//        System.out.println("때리는 애 = " + this.name);
-//        System.out.println("맞는 애 = " + target.name);
 
         if(this == target) {
             System.out.println("스스로는 때릴 수 없습니다.");
@@ -63,18 +55,6 @@ public class Player {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

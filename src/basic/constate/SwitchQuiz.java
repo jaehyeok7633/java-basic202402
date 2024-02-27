@@ -3,6 +3,7 @@ package basic.constate;
 import java.util.Scanner;
 
 public class SwitchQuiz {
+
     public static void main(String[] args) {
 
         /*
@@ -11,8 +12,8 @@ public class SwitchQuiz {
          연산 결과를 출력해 주시면 됩니다. (switch문 사용)
          연산자가 잘못 입력되었다면 연산자를 똑바로 입력하라고
          결과를 말씀해 주세요.
-         만약, 사용자가 나눗셈을 선택했을 때 0으로 나누려는 시도를 한다면
-         연산할 수 없는 입력값이라고 얘기해 주세요.
+         만약, 사용자가 나눗셈을 선택 했을 때 0으로 나누려는 시도를 한다면
+         연산할 수 없는 입력값이라고 얘기 해 주세요.
         */
 
         Scanner sc = new Scanner(System.in);
@@ -20,7 +21,7 @@ public class SwitchQuiz {
         System.out.print("정수 1: ");
         int num1 = sc.nextInt();
 
-        System.out.print("연산을 선택하세요. [=, -, *, /]");
+        System.out.print("연산을 선택하세요. [+, -, *, /]: ");
         String operator = sc.next();
 
         System.out.print("정수 2: ");
@@ -40,7 +41,7 @@ public class SwitchQuiz {
                 result = num1 * num2;
                 break;
             case "/":
-                if (num2 == 0) {
+                if(num2 == 0) {
                     System.out.println("연산할 수 없는 입력값 입니다.");
                     flag = true;
                     break;
@@ -52,12 +53,24 @@ public class SwitchQuiz {
                 System.out.println("연산 기호를 정확하게 입력하세요. [+, -, *, /]");
         }
 
-
-        if (!flag) {
+        if(!flag) {
             System.out.printf("%d %s %d = %d\n", num1, operator, num2, result);
         }
+
         sc.close();
 
 
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+

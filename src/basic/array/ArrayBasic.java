@@ -3,11 +3,12 @@ package basic.array;
 import java.util.Arrays;
 
 public class ArrayBasic {
+
     public static void main(String[] args) {
-        
-        // #배열(array)
+
+        // # 배열(array)
         // -> 같은 데이터 타입의 값을 집합 형태로 나열하기 위한 자료형
-        
+
         // 1. 배열 변수를 선언
         int[] arr; // 이 방식으로 주로 선언
         int arr2[]; // c style
@@ -32,26 +33,26 @@ public class ArrayBasic {
 
         // 4. 배열의 총 크기(길이) 확인 -> 배열변수명.length
         System.out.println("arr 배열의 길이: " + arr.length);
-        
-        // 5. 배열의 저장된 값을 참조(사용)하는 법 -> 인덱스를 활용
+
+        // 5. 배열에 저장된 값을 참조(사용)하는 법 -> 인덱스를 활용
         System.out.println("배열의 1번째 데이터: " + arr[0]);
         System.out.println("배열의 2번째 데이터: " + arr[1]);
         System.out.println("배열의 3번째 데이터: " + arr[2]);
         System.out.println("배열의 4번째 데이터: " + arr[3]);
         System.out.println("배열의 5번째 데이터: " + arr[4]);
 
-        System.out.println("-----------------------------------------");
+        System.out.println("-------------------------------------------------");
 
         // 6. 배열의 반복문 처리
         // 배열은 인덱스를 제어변수로 활용하여 쉽게 반복문 처리 가능
-        for (int idx=0; idx < arr.length; idx++) {
+        for (int idx=0; idx<arr.length; idx++) {
             System.out.printf("배열의 %d번째 데이터: %d\n", idx+1, arr[idx]);
         }
-        
+
         // 7. 배열 내부의 요소값을 문자열 형태로 한눈에 확인하기
         // 배열 변수에는 배열의 주소가 들어있습니다.
         System.out.println("arr = " + Arrays.toString(arr));
-        
+
         // 8. 배열은 선언과 생성이 동시에 가능
         double[] dArr = new double[3];
         String[] sArr = new String[4];
@@ -74,7 +75,21 @@ public class ArrayBasic {
         String[] names = {"홍길동", "김철수", "박영희"};
 //        names = {"홍길동", "김철수", "박영희", "김뽀삐"};
         names = new String[] {"홍길동", "김철수", "박영희", "김뽀삐"};
-
-        
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
