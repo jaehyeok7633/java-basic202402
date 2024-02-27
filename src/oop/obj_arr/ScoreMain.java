@@ -1,63 +1,93 @@
-package oop.overloading;
+package oop.obj_arr;
 
-public class Calculator {
+import java.util.Scanner;
 
-    /*
-	 # 오버로딩 (중복): 하나의 클래스 내부에서 같은 이름을 가진 메서드나
-	  생성자를 여러 개 중복해서 선언할 수 있게 해주는 문법.
+public class ScoreMain {
 
-	 - 오버로딩 적용 조건:
-	 1. 매개 변수의 데이터 타입이 다를 것! or
-	 2. 매개 변수의 전달 순서가 다를 것! or
-	 3. 매개 변수의 개수가 다를 것.
-	 */
+    public static void main(String[] args) {
 
-    void inputData() {}
+        /*
+		 - Score 객체를 담을 수 있는 배열을 선언하세요.
+		  배열의 크기는 넉넉하게 100개로 하겠습니다.
 
-    void inputData(int a) {}
+		 - 반복문을 이용해서 사용자에게 이름, 국어, 영어, 수학점수를
+		 입력받은 후, 입력받은 점수를 토대로 Score 객체를 생성하세요.
+		 총점과 평균은 여러분들이 직접 구해서 넣으셔야 합니다.
+		 (직접 넣으시든, 메서드를 하나 만들어서 계산하시든 마음대로~)
+		 객체 생성 후, 미리 만들어 놓은 배열에 객체를 추가해 주세요.
+		 이름 입력란에 '그만' 이라고 입력하면 반복문을 종료시켜 주세요.
 
-    void inputData(int a, int b) {}
+		 - 반복문이 종료되었다면, 배열 내부에 있는 객체들을 순회하면서
+		  scoreInfo()를 모두 불러주세요. (반복문)
+		  주의!) 입력이 중간에 그만두어진다면, 배열의 나머지 인덱스는
+		  모두 null로 가득 차 있습니다. (null.scoreInfo() -> 에러)
+		 */
+        Score[] scoreList = new Score[100];
+        Scanner sc = new Scanner(System.in);
 
-//    void inputData(int b, int a) {} (x)
+        System.out.println("*** 학생 점수 입력 프로그램 ***");
+        System.out.println("# 이름 입력창에 '그만'을 입력하시면 종료됩니다.");
+        int idx = 0;
 
-    void inputData(String s) {}
+//        while(scoreList[scoreList.length-1] == null) {
+        while(idx != scoreList.length) {
 
-    void inputData(int a, double d) {}
+            System.out.print("# 이름: ");
+            String name = sc.next();
+            if(name.equals("그만")) {
+                System.out.println("입력을 종료합니다.");
+                break;
+            }
 
-    void inputData(double d, int a) {}
+            Score s = new Score();
 
-//    void inputData(int number) {} (x) 정수 매개값 1개를 받는 메서드 이미 선언됨.
+            System.out.print("# 국어: ");
+            int kor = sc.nextInt();
+            if(!s.isValidateScore(kor)) {
+                continue;
+            }
 
-//    int inputData(int number) {
-//        return 0;
-//    } (x) 반환 유형(return type)은 오버로딩에 영향을 미치지 못합니다.
+            System.out.print("# 영어: ");
+            int eng = sc.nextInt();
+            if(!s.isValidateScore(eng)) {
+                continue;
+            }
+
+            System.out.print("# 수학: ");
+            int math = sc.nextInt();
+            if(!s.isValidateScore(math)) {
+                continue;
+            }
+
+            s.setName(name);
+            s.setKor(kor);
+            s.setEng(eng);
+            s.setMath(math);
+            s.setTotalAndAvg();
+
+//            int total = kor + eng + math;
+//            double avg = total / 3.0;
+//            s.setTotal(total);
+//            s.setAverage(avg);
+
+            scoreList[idx] = s;
+            idx++;
+
+            System.out.println("*** 학생 정보 입력 완료! ***\n");
+        } // 입력 반복문 끝
+
+        for (Score score : scoreList) {
+            if (score == null) break;
+            score.scoreInfo();
+            System.out.println("-----------------------------------");
+        }
+
+        sc.close();
 
 
-    int calcRectArea(int r) {
-        return r * r;
     }
-
-    int calcRectArea(int width, int height) {
-        return width * height;
-    }
-
-    double calcRectArea(int ceil, int floor, int height) {
-        return (ceil + floor) * height / 2.0;
-    }
-
-
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
