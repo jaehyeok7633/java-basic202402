@@ -109,8 +109,27 @@ public class MovieRepository {
     }
 
 
-
+    public Movie deleteMovie(int delMovieNum) {
+        return movieDatabase.remove(delMovieNum);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
