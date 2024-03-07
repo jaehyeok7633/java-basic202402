@@ -10,9 +10,9 @@ public class Movie {
     private String movieName; // 영화제목
     private String nation; // 국적
     private int pubYear; // 발매년도
-    private int charge; // 대여가격
+    private int charge; // 대여 가격
     private boolean rental; // 대여 가능 여부
-    private User rentalUser; //현재 대여자 정보
+    private User rentalUser; // 현재 대여자 정보
 
     public Movie(String movieName, String nation, int pubYear) {
         this.serialNumber = ++movieSequence;
@@ -90,3 +90,16 @@ public class Movie {
                         ", 대여상태: " + rental;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
