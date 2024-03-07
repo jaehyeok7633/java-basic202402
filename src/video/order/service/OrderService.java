@@ -3,6 +3,7 @@ package video.order.service;
 import video.common.AppService;
 import video.movie.domain.Movie;
 import video.movie.repository.MovieRepository;
+import video.order.domain.Order;
 import video.ui.AppUi;
 import video.user.domain.User;
 import video.user.repository.UserRepository;
@@ -112,13 +113,28 @@ public class OrderService implements AppService {
 
             if (userNums.contains(userNumber)) {
                 // 대여 완료 처리
+                User rentalUser = userRepository.findUserByNumber(userNumber); // 렌탈 유저 정보 획득.
+                rentalMovie.setRental(true); // 대여상태를 대여중으로 변경
+                rentalMovie.setRentalUser(rentalUser); // 영화 객체에 렌탈 유저 등록
 
+                rentalUser.setTotalPaying(rentalMovie.getCharge()); // 영화 대여 금액을 회원 총 결제금액에 누적 갱신
 
+                // 새로운 주문 생성
+                Order newOrder = new Order(rentalUser, rentalMovie);
+                rentalUser.addOrder(newOrder); // 회원 대여 목록에 주문을 추가.
+
+                String phoneNumber = rentalUser.getPhoneNumber();
+
+                // lastIndexOf(str): 해당 문자열의 위치를 뒤에서부터 탐색.
+                // 뒤에서부터 탐색을 시작해서 "-"을 찾아라 -> 그 "-" 이후로부터 끝까지 추출해라.
+                System.out.printf("\n### [%s(%s) 회원님] 대여 처리가 완료되었습니다. 감사합니다!\n"
+                        , rentalUser.getUserName(), rentalUser.getPhoneNumber().substring(phoneNumber.lastIndexOf("-")));
+
+                System.out.printf("### 현재 등급: [%s], 총 누적 결재금액: %d원\n", rentalUser.getGrade(), rentalUser.getTotalPaying());
 
             } else {
                 System.out.println("\n### 검색된 회원의 번호를 입력하세요.");
             }
-
 
         } else {
             System.out.println("\n### 대여자 정보가 없습니다.");
@@ -129,6 +145,15 @@ public class OrderService implements AppService {
 
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
